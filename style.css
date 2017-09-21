@@ -16,10 +16,14 @@ h1{
 	color: blue;
 }
 
+body{
+	background-image: url("https://i.pinimg.com/originals/24/67/e6/2467e6e856f5c54ccc1323b87dde6c05.jpg");
+}
 table{
 	border-collapse: collapse;
-	background-color: grey;
+	background-color: #f1f1f1;
 	margin: 0 auto;
+	border-radius: 5px;
 }
 
 .cells{
@@ -31,50 +35,55 @@ table{
 #topLeft{
 	border-left: none;
 	border-top: none;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
+	border-right: 10px solid white;
+	border-bottom: 10px solid white;
 	
 	
 }
 
 #topMiddle{
-	border-bottom: 1px solid black
+	border-bottom: 10px solid white;
 
 }
 
 #topRight{
-	border-bottom: 1px solid black;
-	border-left: 1px solid black;
+	border-bottom: 10px solid white;
+	border-left: 10px solid white;
 
 }
 
 #middleLeft{
-	border-right: 1px solid black;
+	border-right: 10px solid white;
 }
 
 #middle{
-	border-right: 1px solid black;
+	border-right: 10px solid white;
 
 }
 
 #middleRight{
-	border-left: 1px solid black;
+	border-left: 10px solid white;
 
 }
 
 #leftBottom{
-	border-top: 1px solid black;
-	border-right: 1px solid black;
+	border-top: 10px solid white;
+	border-right: 10px solid white;
 
 }
 
 #middleBottom{
-border-top: 1px solid black;
+border-top: 10px solid white;
 
 }
 
 #rightBottom{
-	border-top: 1px solid black;
-	border-left: 1px solid black;
+	border-top: 10px solid white;
+	border-left: 10px solid white;
 
+}
+
+button{
+	margin: 0 auto;
+	color
 }
