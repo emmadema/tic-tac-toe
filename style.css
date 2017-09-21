@@ -1,0 +1,80 @@
+/*make a 3x3 grid with squares 
+only color in the lines to make tthe board 
+1. bottom and right side
+2. left, right and bottom
+3. bottom and left 
+4. top and right and bottom
+5. all sides
+6. left, top and bottom
+7. top, right
+8. left, right, top
+9. left, top
+*/
+
+h1{
+	text-align: center;
+	color: blue;
+}
+
+table{
+	border-collapse: collapse;
+	background-color: grey;
+	margin: 0 auto;
+}
+
+.cells{
+	padding: 100px;
+	text-align: center;
+
+}
+
+#topLeft{
+	border-left: none;
+	border-top: none;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	
+	
+}
+
+#topMiddle{
+	border-bottom: 1px solid black
+
+}
+
+#topRight{
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+
+}
+
+#middleLeft{
+	border-right: 1px solid black;
+}
+
+#middle{
+	border-right: 1px solid black;
+
+}
+
+#middleRight{
+	border-left: 1px solid black;
+
+}
+
+#leftBottom{
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+
+}
+
+#middleBottom{
+border-top: 1px solid black;
+
+}
+
+#rightBottom{
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+
+}
