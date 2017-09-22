@@ -13,14 +13,19 @@ only color in the lines to make tthe board
 
 h1{
 	text-align: center;
-	color: blue;
+	color: #3f3f3f;
+	font-size: 46px;
+	background: white;
+	padding: 10px;
+	border-radius: 20px;
+	font-family: 'Catamaran', sans-serif;
 }
 
 body{
 	background-image: url("https://i.pinimg.com/originals/24/67/e6/2467e6e856f5c54ccc1323b87dde6c05.jpg");
 }
 table{
-	border-collapse: collapse;
+	border-collapse: collapse; /*allows the boarder to connect*/
 	background-color: #f1f1f1;
 	margin: 0 auto;
 	border-radius: 5px;
@@ -32,11 +37,27 @@ table{
 
 }
 
+.cat1{
+	background-image: url("http://piq.codeus.net/static/media/userpics/piq_6868.png");
+}
+
+.cat2{
+	background-image: url("https://orig00.deviantart.net/57ab/f/2011/157/7/0/poptart_cat_journal_doll_by_yellowfangofstarclan-d3i8v6f.gif");
+}
+
+img{
+	padding: 0px;
+	margin: 0px;
+	max-width: 50px;
+	max-height: 50px;
+}
+
 #topLeft{
 	border-left: none;
 	border-top: none;
 	border-right: 10px solid white;
 	border-bottom: 10px solid white;
+	
 	
 	
 }
@@ -66,18 +87,18 @@ table{
 
 }
 
-#leftBottom{
+#bottomLeft{
 	border-top: 10px solid white;
 	border-right: 10px solid white;
 
 }
 
-#middleBottom{
+#bottomMiddle{
 border-top: 10px solid white;
 
 }
 
-#rightBottom{
+#bottomRight{
 	border-top: 10px solid white;
 	border-left: 10px solid white;
 
