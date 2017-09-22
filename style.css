@@ -23,6 +23,9 @@ h1{
 
 body{
 	background-image: url("https://i.pinimg.com/originals/24/67/e6/2467e6e856f5c54ccc1323b87dde6c05.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+
 }
 table{
 	border-collapse: collapse; /*allows the boarder to connect*/
@@ -34,15 +37,19 @@ table{
 .cells{
 	padding: 100px;
 	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
 
 }
 
+/*appends cat one image to  the cells and hides them*/
 .cat1{
 	background-image: url("http://piq.codeus.net/static/media/userpics/piq_6868.png");
 }
-
+/*appends cat two image to  the cells and hides them*/
 .cat2{
 	background-image: url("https://orig00.deviantart.net/57ab/f/2011/157/7/0/poptart_cat_journal_doll_by_yellowfangofstarclan-d3i8v6f.gif");
+	margin: 0 auto;
 }
 
 img{
@@ -104,7 +111,14 @@ border-top: 10px solid white;
 
 }
 
-button{
-	margin: 0 auto;
-	color
+.reset{
+	margin: 50px;
+	float: right;
+	background-color: #3f3f3f;
+	font-family: 'Catamaran', sans-serif;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 24px;
+	color: white;
+	border-color: white;
 }

@@ -28,7 +28,7 @@ var playerTurn = "player_1";
 //when user clicks randomly select x or o then stop depending on who clicks
 //first access #topLeft id in th under tr under tb under table
 
-//function resetFun(){
+
 	$('.cells').click(function(){
 		if (playerTurn === "player_1") {
 			playerTurn = "player_2";
@@ -38,13 +38,17 @@ var playerTurn = "player_1";
 			$(this).addClass('cat2');
 		}
 		$(this).unbind("click");
+
+		$('.reset').click(function(){
+			$(this).removeClass('cat1');		
+		});
 	});
-//}
 
 //button click = 
 //remove the class back to just cells
 //reset
 //$("button").click(resetFun);
+
 
 
 // //#topMiddle
