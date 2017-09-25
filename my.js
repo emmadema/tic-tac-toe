@@ -10,6 +10,12 @@
 //Add a reset button that will clear the contents of the board  -Done!
 //Deploy your game online, using GitHub pages. If you're not sure how to do this, refer back to the earlier GitHub lesson.
 
+//If I had more time I would:
+//show and style the tokens for each playe below the board
+//allow players to enter their name
+//create an alert for each player to go
+
+
 console.log("hello");
 
 
