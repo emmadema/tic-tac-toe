@@ -1,34 +1,22 @@
-//create a working tic-tac-toe board
-//when a section is clicked show X or O randomly for each 9 sections
-//create constructor functions for your code- dont let it change your function
+//create a working tic-tac-toe board -Done
+//when a section is clicked show X or O randomly for each 9 sections -Done
+//create constructor functions for your code- dont let it change your function -Done
 
-//Solution should use ONLY jQuery or vanilla JavaScript - not some combination thereof
-//Users should see a 3x3 grid for the tic-tac-toe board
-//A user should be able to click on different squares to make a move
-//Every click will alternate between marking an X and O
-//Upon marking of an individual cell, use JavaScript to add a class to each cell to display separate colors (either background or text--both is better)
-//Add a reset button that will clear the contents of the board
+//Solution should use ONLY jQuery or vanilla JavaScript - not some combination thereof -Done
+//Users should see a 3x3 grid for the tic-tac-toe board -Done
+//A user should be able to click on different squares to make a move -Done
+//Every click will alternate between marking an X and O -Done
+//Upon marking of an individual cell, use JavaScript to add a class to each cell to display separate colors (either background or text--both is better)-Done but with cats
+//Add a reset button that will clear the contents of the board  -Done!
 //Deploy your game online, using GitHub pages. If you're not sure how to do this, refer back to the earlier GitHub lesson.
 
 console.log("hello");
-//player X goes first
-//establish who is going first and alert the user
-
-//if (turn) {
-//	game.player_1.playerMove();
-//} else {
-//	game.player_2.playerMove();
-//}
-//turn = !turn;
 
 
 var playerTurn = "player_1";
 
-//#topLeft 
-//when user clicks randomly select x or o then stop depending on who clicks
-//first access #topLeft id in th under tr under tb under table
 
-
+//when a player clicks they are assigned a class of cat 1 and the first cat pic appears then each turn alternates until all cells are full
 	$('.cells').click(function(){
 		if (playerTurn === "player_1") {
 			playerTurn = "player_2";
@@ -37,19 +25,16 @@ var playerTurn = "player_1";
 			playerTurn = "player_1";
 			$(this).addClass('cat2');
 		}
-		$(this).unbind("click");
-
-		$('.reset').click(function(){
-			$(this).removeClass('cat1');		
-		});
+		$(this).unbind("click"); //stops the player from being able to click again
 	});
 
-//button click = 
-//remove the class back to just cells
-//reset
-//$("button").click(resetFun);
 
 
+//rest button for game - removes the classes added to the cells in the game board 
+	$('.reset').click(function(){
+		$('.cells').removeClass('cat1');
+		$('.cells').removeClass('cat2');		
+	});
 
 // //#topMiddle
 // //when user clicks randomly select x or o then stop depsnging on who click

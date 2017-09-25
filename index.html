@@ -2,35 +2,65 @@
 <html>
 <head>
 	<title>Tic Tac Toe</title>
-
+	<!--Link stylesheet CSS-->
 	<link href="style.css" type="text/css" rel="stylesheet" /> 
+
+	<!--Link google font-->
 	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+
+	<!--Link jquery CDN-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+	<!--Create Header-->
 	<h1>Tic Tac Toe</h1> 
 
+	<!--create a table with the class of game board to make the tic tac toe board-->
 	<table id="gameBoard" class="table">
 		<tbody>
-		<tr>
+		<tr> <!--Create table rows and name cells accroding to loaction on game board-->
 			<th id = "topLeft" class="cells"></th>
 			<th id = "topMiddle" class ="cells"></th>
 			<th id = "topRight" class = "cells"></th>
 		</tr>
-		<tr>
+		<tr><!--Create table rows and name cells according to location on game board-->
 			<th id = "middleLeft" class = "cells"></th>
 			<th id = "middle" class = "cells"></th>
 			<th id ="middleRight" class = "cells"></th>
 		</tr>
-		<tr>
+		<tr><!--Create table rows and name cells according to location on game board-->
 			<th id = "bottomLeft" class = "cells"></th>
 			<th id = "bottomMiddle" class = "cells"></th>
 			<th id = "bottomRight" class = "cells"></th>
 		</tr>
 		</tbody>
 	</table>
+
+	<div class = 'p1Token'></div>
+	<div class = 'p2Token'></div>
+
+	<!--reset the board button-->
+	<button class = "reset">Play Again</button>
+
+<!-- add js sheet-->
 	<script src="my.js" type="text/javascript" /></script>
-	
-<button class = "reset">Play Again</button>
 </body>
 </html>
+
+<!--Requiremnts: 
+- Solution should use **ONLY jQuery or vanilla JavaScript** - not some combination thereof -Done
+
+- Users should see a 3x3 grid for the tic-tac-toe board -Done
+
+- A user should be able to click on different squares to make a move -Done
+
+- Every click will alternate between marking an `X` and `O` - Done but its cats
+
+- Upon marking of an individual cell, use JavaScript to add a class to
+  each cell to display separate colors (either background or text-both is better)- added an image instead
+
+- A cell should not be able to be replayed once marked - Done
+
+- Add a reset button that will clear the contents of the board
+
+- Deploy your game online, using GitHub pages.  If you're not sure how to do this, refer back to [the earlier GitHub lesson](https://github.com/den-materials/git-branching-and-pages).-->
