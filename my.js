@@ -30,7 +30,7 @@ $('.cells').click(function(){
 		$(this).addClass('cat1');
 		scoreP1.push($(this));
 		console.log(scoreP1);
-		if (scoreP1[0].attr('id') === $('#topLeft') && scoreP1[1].attr('id') === $('#topMiddle') && scoreP1[2].attr('id') === $('#topRight')) {
+		if (scoreP1 === ($('#topLeft').attr('id') === "topLeft") && ($('#topMiddle').attr('id') === "topMiddle") && ($('#topRight').attr('id') === "topRight")) {
 			alert("Player 1 wins");
 		}
 	} 
