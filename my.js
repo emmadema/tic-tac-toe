@@ -20,21 +20,43 @@ console.log("hello");
 
 
 var playerTurn = "player_1";
-
+var scoreP1 = [];
+var scoreP2 = [];
 
 //when a player clicks they are assigned a class of cat 1 and the first cat pic appears then each turn alternates until all cells are full
-	$('.cells').click(function(){
-		if (playerTurn === "player_1") {
-			playerTurn = "player_2";
-			$(this).addClass('cat1');
-		} else {
-			playerTurn = "player_1";
-			$(this).addClass('cat2');
+$('.cells').click(function(){
+	if (playerTurn === "player_1") {
+		playerTurn = "player_2";
+		$(this).addClass('cat1');
+		scoreP1.push($(this));
+		console.log(scoreP1);
+		if (scoreP1[0].attr('id') === $('#topLeft') && scoreP1[1].attr('id') === $('#topMiddle') && scoreP1[2].attr('id') === $('#topRight')) {
+			alert("Player 1 wins");
 		}
-		$(this).unbind("click"); //stops the player from being able to click again
-	});
+	} 
+	else {
+		playerTurn = "player_1";
+		$(this).addClass('cat2');
+		scoreP2.push($(this));
+		console.log(scoreP2);
+		if (scoreP2[0].attr('id') === $('#topLeft') && scoreP2[1].attr('id') === $('#topMiddle') && scoreP2[2].attr('id') === $('#topRight')) {
+			alert("Player 2 wins");
+		}
+	}
+	$(this).unbind("click"); //stops the player from being able to click again
 
+});
 
+	//topLeft = $('#topLeft').class();
+	//topMiddle = $('#topMiddle').class();
+	//topRight = $('#topRight').class();
+
+	//if (topLeft && topMiddle && topRight === ('.cat1')){
+	//	alert(" Player 1 Wins");
+	//} 
+	//else if (topLeft && topMiddle && topRight === ('.cat2')){
+	//	alert("Player 2 wins");
+	//}
 
 //rest button for game - removes the classes added to the cells in the game board 
 	$('.reset').click(function(){
@@ -42,63 +64,6 @@ var playerTurn = "player_1";
 		$('.cells').removeClass('cat2');		
 	});
 
-// //#topMiddle
-// //when user clicks randomly select x or o then stop depsnging on who click
-
-// //$('#img1', '#img2').on("click", function(){
-// //	$(this).append("<img src ='https://orig00.deviantart.net/57ab/f/2011/157/7/0/poptart_cat_journal_doll_by_yellowfangofstarclan-d3i8v6f.gif'/>");
-// //	console.log("click 2");
-// //});
-
-// //#topRight
-// //when user clicks randomly select x or o then stop depsnding on who clcick
-
-// //$('.cells').click(function(){
-
-// //	console.log("click 3");
-// });
-
-
-// //#middleLeft
-// //when user clicks randomly select x or o then stop
-
-// $('#middleLeft').click(function(){
-// 	console.log("click 4");
-// });
-
-// //#middle
-// //when user clicks randomly select x or o then stop
-// $('#middle').click(function(){
-// 	console.log("click 5");
-// });
-
-
-// //#middleRight
-// //when user clicks randomly select x or o then stop
-// $('#middleRight').click(function(){
-// 	console.log("click 6");
-// });
-
-
-// //#bottomLeft
-// //when user clicks randomly select x or o then stop
-// $('#bottomLeft').click(function(){
-// 	console.log("click 7");
-// });
-
-
-// //#bottomMiddle
-// //when user clicks randomly select x or o then stop
-// $('#bottomMiddle').click(function(){
-// 	console.log("click 8");
-// });
-
-// //#bottomRight
-// //when user clicks randomly select x or o then stop
-
-// $('#bottomRight').click(function(){
-// 	console.log("click 9");
-// });
 
 
 
