@@ -37,18 +37,12 @@ function clickCells(){
 			$(this).addClass('cat1');
 			scoreP1.push($(this));
 			console.log(scoreP1);
-			//if (scoreP1 === ($('topLeft').attr('id') === "topLeft") && ($('topMiddle').attr('id') === "topMiddle") && ($('topRight').attr('id') === "topRight")) {
-			//	console.log("Player 1 wins");
-			//}
 		} 
 		else {
 			playerTurn = "player_1";
 			$(this).addClass('cat2');
 			scoreP2.push($(this));
 			console.log(scoreP2);
-			//if (scoreP2[0].attr('id') === $('#topLeft') && scoreP2[1].attr('id') === $('#topMiddle') && scoreP2[2].attr('id') === $('#topRight')) {
-			//	console.log("Player 2 wins");
-			//}
 		}
 		$(this).unbind("click"); //stops the player from being able to click again
 		winnerCheck();
@@ -56,6 +50,7 @@ function clickCells(){
 }
 
 clickCells();
+//calls the click cells function
 
 
 function winnerCheck() {
@@ -65,24 +60,31 @@ function winnerCheck() {
 		var cellClass = $('#' + winner[rowNumber][0]).attr('class');
 		//get the cell class of each value in each row
 		if (cellClass.indexOf(' ') >= 0) {
-		//
+		//checking to see if there is a space in the cellClass if the value is mor ethan -1 keep going
 		} else {
-			continue;
+			continue; // if there is no space go back to the start of the finction
 		}
 		var counter = 0;
+		//creates a counter varibale for the cells
 		for(cellNumber = 1; cellNumber < winner[rowNumber].length; cellNumber++){
+			//
 			// console.log("Cell number is " + winner[rowNumber][cellNumber]);
 			var cellNum = winner[rowNumber][cellNumber];
 			// console.log($('#' + cellNum));
 			if (cellClass === $('#' + cellNum).attr('class')){
+			//if the cell class of the first cell is equal to the cell class of the second cell add one to the counter
 				counter++;
 			}
 			else {
+			//if it is not equal break
 				break;
 			}	
 		}
+
 		if (counter === 2){
 			alert('game over');
+		// if the counter getds to 2 the game is over
+		//the counter is at 2 beacuse we start with and initial one and then contuine through two more to comapre
 		}
 	}
 }
@@ -96,8 +98,11 @@ function winnerCheck() {
 //rest button for game - removes the classes added to the cells in the game board 
 	$('.reset').click(function(){
 		$('.cells').removeClass('cat1');
+		//removes class of cat 1 from the cells
 		$('.cells').removeClass('cat2');
+		//removes class of cat 2 from the cells
 		clickCells();		
+		//restarts the click cells function
 	});
 
 
