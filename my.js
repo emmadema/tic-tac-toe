@@ -30,44 +30,63 @@ var winner = [
 var counter = 0;
 
 //when a player clicks they are assigned a class of cat 1 and the first cat pic appears then each turn alternates until all cells are full
-$('.cells').click(function(){
-	if (playerTurn === "player_1") {
-		playerTurn = "player_2";
-		$(this).addClass('cat1');
-		scoreP1.push($(this));
-		console.log(scoreP1);
-		//if (scoreP1 === ($('topLeft').attr('id') === "topLeft") && ($('topMiddle').attr('id') === "topMiddle") && ($('topRight').attr('id') === "topRight")) {
-		//	console.log("Player 1 wins");
-		//}
-	} 
-	else {
-		playerTurn = "player_1";
-		$(this).addClass('cat2');
-		scoreP2.push($(this));
-		console.log(scoreP2);
-		//if (scoreP2[0].attr('id') === $('#topLeft') && scoreP2[1].attr('id') === $('#topMiddle') && scoreP2[2].attr('id') === $('#topRight')) {
-		//	console.log("Player 2 wins");
-		//}
-	}
-	$(this).unbind("click"); //stops the player from being able to click again
-
-});
-
-function gameWinner() {
-	for (var i = 0; i < winner.length; i++) {
-		counter = 0;
-		for (var j = 0; j < winner[i].length; j++) 
-			if(playerTurn.indexOf(winner[i][j]) !== -1) { 
-        		counter++;
-			} if (counter === 3) {
-				alert(playerTurn + " wins!");
-			}	
-	}		
+function clickCells(){
+	$('.cells').click(function(){
+		if (playerTurn === "player_1") {
+			playerTurn = "player_2";
+			$(this).addClass('cat1');
+			scoreP1.push($(this));
+			console.log(scoreP1);
+			//if (scoreP1 === ($('topLeft').attr('id') === "topLeft") && ($('topMiddle').attr('id') === "topMiddle") && ($('topRight').attr('id') === "topRight")) {
+			//	console.log("Player 1 wins");
+			//}
+		} 
+		else {
+			playerTurn = "player_1";
+			$(this).addClass('cat2');
+			scoreP2.push($(this));
+			console.log(scoreP2);
+			//if (scoreP2[0].attr('id') === $('#topLeft') && scoreP2[1].attr('id') === $('#topMiddle') && scoreP2[2].attr('id') === $('#topRight')) {
+			//	console.log("Player 2 wins");
+			//}
+		}
+		$(this).unbind("click"); //stops the player from being able to click again
+		winnerCheck();
+	});
 }
 
-console.log(playerTurn);
+clickCells();
 
-gameWinner();
+
+function winnerCheck() {
+	for( rowNumber = 0; rowNumber < winner.length; rowNumber++){
+		// console.log("Row Number is " + rowNumber);
+		//go through each row
+		var cellClass = $('#' + winner[rowNumber][0]).attr('class');
+		//get the cell class of each value in each row
+		if (cellClass.indexOf(' ') >= 0) {
+		//
+		} else {
+			continue;
+		}
+		var counter = 0;
+		for(cellNumber = 1; cellNumber < winner[rowNumber].length; cellNumber++){
+			// console.log("Cell number is " + winner[rowNumber][cellNumber]);
+			var cellNum = winner[rowNumber][cellNumber];
+			// console.log($('#' + cellNum));
+			if (cellClass === $('#' + cellNum).attr('class')){
+				counter++;
+			}
+			else {
+				break;
+			}	
+		}
+		if (counter === 2){
+			alert('game over');
+		}
+	}
+}
+
 
 //fill out for loops
 //check if there is cat 1 at that number
@@ -77,7 +96,8 @@ gameWinner();
 //rest button for game - removes the classes added to the cells in the game board 
 	$('.reset').click(function(){
 		$('.cells').removeClass('cat1');
-		$('.cells').removeClass('cat2');		
+		$('.cells').removeClass('cat2');
+		clickCells();		
 	});
 
 

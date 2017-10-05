@@ -39,6 +39,7 @@ table{
 	text-align: center;
 	background-repeat: no-repeat;
 	background-position: center;
+	border: 10px solid white;
 
 }
 
@@ -57,58 +58,6 @@ img{
 	margin: 0px;
 	max-width: 50px;
 	max-height: 50px;
-}
-
-#topLeft{
-	border-left: none;
-	border-top: none;
-	border-right: 10px solid white;
-	border-bottom: 10px solid white;
-	
-	
-	
-}
-
-#topMiddle{
-	border-bottom: 10px solid white;
-
-}
-
-#topRight{
-	border-bottom: 10px solid white;
-	border-left: 10px solid white;
-
-}
-
-#middleLeft{
-	border-right: 10px solid white;
-}
-
-#middle{
-	border-right: 10px solid white;
-
-}
-
-#middleRight{
-	border-left: 10px solid white;
-
-}
-
-#bottomLeft{
-	border-top: 10px solid white;
-	border-right: 10px solid white;
-
-}
-
-#bottomMiddle{
-border-top: 10px solid white;
-
-}
-
-#bottomRight{
-	border-top: 10px solid white;
-	border-left: 10px solid white;
-
 }
 
 .reset{
